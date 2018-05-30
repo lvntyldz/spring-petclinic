@@ -22,5 +22,8 @@ $ java -jar -Dspring.profiles.active=dev  petclinic-1.0-SNAPSHOT.jar
 
 
 ## Web UI
-Visit this url from local browser
+To access actuator endpoints visit this url from local browser
 (http://localhost:8080/actuator/health)
+
+To access actuator environments visit this url from local browser
+(http://localhost:8080/actuator/env)
