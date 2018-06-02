@@ -11,14 +11,14 @@ import com.samples.model.Owner;
 
 @Service
 public class PetClinicServiceImpl implements PetClinicService {
-	
+
 	private OwnerRepository ownerRepository;
 
 	@Autowired
 	public void setOwnerRepository(OwnerRepository ownerRepository) {
 		this.ownerRepository = ownerRepository;
 	}
-	
+
 	@Override
 	public List<Owner> findOwners() {
 		return ownerRepository.findAll();
@@ -31,9 +31,10 @@ public class PetClinicServiceImpl implements PetClinicService {
 
 	@Override
 	public Owner findOwner(Long id) throws OwnerNotFoundException {
-		
+
 		Owner owner = ownerRepository.findById(id);
-		if(owner==null) throw new OwnerNotFoundException("Owner Not Found with Given Id : "+id);
+		if (owner == null)
+			throw new OwnerNotFoundException("Owner Not Found with Given Id : " + id);
 		return owner;
 	}
 
