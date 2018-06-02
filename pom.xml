@@ -19,6 +19,11 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<!-- to use Jsp template engine -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
