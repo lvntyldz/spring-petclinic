@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.samples</groupId>
@@ -20,20 +18,18 @@
 	</properties>
 
 	<dependencies>
-	
-	<!-- to use Jsp template engine -->
-	<dependency>
-	<groupId>org.apache.tomcat.embed</groupId>
-	<artifactId>tomcat-embed-jasper</artifactId>
-	</dependency>
-	
-	<!-- to user html tag in Jsp pages -->
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>jstl</artifactId>
-</dependency>
 
-	
+		<!-- to use Jsp template engine -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<!-- to user html tag in Jsp pages -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -46,9 +42,9 @@
 		</dependency>
 
 		<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-devtools</artifactId>
-		<optional>true</optional>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 	</dependencies>
