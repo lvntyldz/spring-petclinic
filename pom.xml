@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.samples</groupId>
 	<artifactId>petclinic</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>petclinic</name>
 
@@ -20,6 +20,20 @@
 	</properties>
 
 	<dependencies>
+	
+	<!-- to use Jsp template engine -->
+	<dependency>
+	<groupId>org.apache.tomcat.embed</groupId>
+	<artifactId>tomcat-embed-jasper</artifactId>
+	</dependency>
+	
+	<!-- to user html tag in Jsp pages -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+</dependency>
+
+	
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -30,7 +44,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
+
 		<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-devtools</artifactId>

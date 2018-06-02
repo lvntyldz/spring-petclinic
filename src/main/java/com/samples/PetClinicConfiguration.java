@@ -10,10 +10,10 @@ public class PetClinicConfiguration {
 
 	@Autowired
 	private PetClinicProperties petClinicProperties;
-	
+
 	@PostConstruct
 	public void init() {
-	System.out.println("Display Owners With Peths : "+petClinicProperties.isDisplayOwnersWithPets());
+		System.out.println("Display Owners With Peths : " + petClinicProperties.isDisplayOwnersWithPets());
 	}
-	
+
 }
