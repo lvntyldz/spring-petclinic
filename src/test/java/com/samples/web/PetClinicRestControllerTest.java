@@ -1,5 +1,6 @@
 package com.samples.web;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -20,6 +21,20 @@ public class PetClinicRestControllerTest {
 	@Before
 	public void setup() {
 		restTemplate = new RestTemplate();
+	}
+
+	@Test
+	public void createOwner() {
+		Owner owner = new Owner();
+		owner.setFirstName("Ali");
+		owner.setLastName("ALİZADE");
+
+		URI location = restTemplate.postForLocation("http://localhost:8081/petclinic/rest/owner", owner);
+		Owner owner2 = restTemplate.getForObject(location, Owner.class);
+
+		MatcherAssert.assertThat(owner.getFirstName(), Matchers.equalTo(owner2.getFirstName()));
+		MatcherAssert.assertThat(owner.getLastName(), Matchers.equalTo(owner2.getLastName()));
+
 	}
 
 	@Test
@@ -46,7 +61,7 @@ public class PetClinicRestControllerTest {
 
 		List<Map<String, String>> body = response.getBody();
 		List<String> firstNames = body.stream().map(e -> e.get("firstName")).collect(Collectors.toList());
-		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Levent", "Ali", "Veli", "Hasan"));
+		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Levent", "Ali", "Veli", "Hasan", "Ali"));
 	}
 
 }
