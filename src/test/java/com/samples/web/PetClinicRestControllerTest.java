@@ -7,9 +7,11 @@ import java.util.stream.Collectors;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.samples.model.Owner;
@@ -81,4 +83,15 @@ public class PetClinicRestControllerTest {
 		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Levent", "Ali", "Veli", "Hasan", "Ali"));
 	}
 
+	@Test
+	public void deleteOwner() {
+		String url = "http://localhost:8081/petclinic/rest/owner/14";
+		restTemplate.delete(url);
+		try {
+			restTemplate.getForEntity(url, Owner.class);
+			Assert.fail("It should have been deleted!");
+		} catch (RestClientException e) {
+			// owner not found(delete success)
+		}
+	}
 }
