@@ -25,6 +25,26 @@ public class PetClinicRestController {
 	@Autowired
 	PetClinicService petClinicService;
 
+	@RequestMapping(method = RequestMethod.PUT, value = "/owner/{id}")
+	public ResponseEntity<?> updateOwner(@PathVariable("id") Long id, @RequestBody Owner ownerRequest) {
+		try {
+
+			Owner owner = petClinicService.findOwner(id);
+			owner.setFirstName(ownerRequest.getFirstName());
+			owner.setLastName(ownerRequest.getLastName());
+
+			petClinicService.updateOwner(owner);
+
+			return ResponseEntity.ok().build();
+
+		} catch (OwnerNotFoundException e) {
+			return ResponseEntity.notFound().build();
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+
+	}
+
 	@RequestMapping(method = RequestMethod.POST, value = "/owner")
 	public ResponseEntity<URI> createOwner(@RequestBody Owner owner) {
 

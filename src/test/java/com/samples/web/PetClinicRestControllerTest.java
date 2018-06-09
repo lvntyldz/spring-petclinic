@@ -24,6 +24,23 @@ public class PetClinicRestControllerTest {
 	}
 
 	@Test
+	public void updateOwner() {
+		String url = "http://localhost:8081/petclinic/rest/owner/3";
+
+		Owner owner = restTemplate.getForObject(url, Owner.class);
+		MatcherAssert.assertThat(owner.getFirstName(), Matchers.equalTo("Veli"));
+
+		// update
+		owner.setLastName("VELİCAN");
+		restTemplate.put(url, owner);
+
+		// validate
+		owner = restTemplate.getForObject(url, Owner.class);
+		MatcherAssert.assertThat(owner.getLastName(), Matchers.equalTo("VELİCAN"));
+
+	}
+
+	@Test
 	public void createOwner() {
 		Owner owner = new Owner();
 		owner.setFirstName("Ali");
