@@ -11,6 +11,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -80,18 +81,19 @@ public class PetClinicRestControllerTest {
 
 		List<Map<String, String>> body = response.getBody();
 		List<String> firstNames = body.stream().map(e -> e.get("firstName")).collect(Collectors.toList());
-		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Levent", "Ali", "Veli", "Hasan", "Ali"));
+		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Levent", "Veli", "Hasan", "Ali"));
 	}
 
 	@Test
 	public void deleteOwner() {
-		String url = "http://localhost:8081/petclinic/rest/owner/14";
+		String url = "http://localhost:8081/petclinic/rest/owner/2";
 		restTemplate.delete(url);
 		try {
 			restTemplate.getForEntity(url, Owner.class);
 			Assert.fail("It should have been deleted!");
-		} catch (RestClientException e) {
+		} catch (HttpClientErrorException e) {
 			// owner not found(delete success)
+			MatcherAssert.assertThat(e.getStatusCode().value(), Matchers.equalTo(404));
 		}
 	}
 }
