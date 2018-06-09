@@ -23,6 +23,10 @@ To access owner's Rest APIs  visit this url from local browser
 <br /> http://localhost:8080/rest/owner?ln=YILDIZ
 <br /> http://localhost:8080/rest/owner/3
 
+Dynamic Content type
+<br /> default(xml) :  http://localhost:8080/rest/owner/3
+<br /> to json :  http://localhost:8080/rest/owner/3.json
+
 
 ___
 ___
@@ -46,3 +50,7 @@ To access owner's Rest APIs  visit this url from local browser
 <br /> http://localhost:8081/petclinic/rest/owners
 <br /> http://localhost:8081/petclinic/rest/owner?ln=YILDIZ
 <br /> http://localhost:8081/petclinic/rest/owner/3
+
+Dynamic Content type
+<br /> default(xml) :  http://localhost:8081/petclinic/rest/owner/3
+<br /> to json :  http://localhost:8081/petclinic/rest/owner/3.json
