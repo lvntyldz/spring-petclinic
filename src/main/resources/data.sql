@@ -1,0 +1,24 @@
+INSERT INTO t_owner (id,first_name,last_name) VALUES (1, 'Ali', 'ALİOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (2, 'Veli', 'VELİOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (3, 'Hasan', 'HASANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (4, 'Hüseyin', 'HÜSEYİNOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (5, 'Akif', 'AKİFOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (6, 'Mert', 'MERTOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (7, 'Can', 'CANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (8, 'Murat', 'MURATOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (9, 'Kaan', 'KAANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (10, 'Kadir', 'KADİROĞLU');
+
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (1, 'Maviş', '2018-01-27', 1);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (2, 'Badem', '2018-02-26', 1);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (3, 'Cambaz', '2018-03-25', 1);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (4, 'Dilber', '2018-04-24', 2);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (5, 'Garip', '2018-05-23', 2);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (6, 'Gazoz', '2018-06-13', 3);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (7, 'Kadife', '2018-07-14', 5);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (8, 'Boncuk', '2018-08-15', 5);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (9, 'Maskara', '2018-09-16', 5);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (10, 'Şalgam', '2018-12-17', 6);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (11, 'Uykucu', '2018-11-18', 7);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (12, 'Yumy', '2018-10-19', 8);
+INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (13, 'Ramses', '2018-06-20', 9);
