@@ -27,6 +27,8 @@ Dynamic Content type
 <br /> default(xml) :  http://localhost:8080/rest/owner/3
 <br /> to json :  http://localhost:8080/rest/owner/3.json
 
+Databse Console
+<br /> h2-console :  http://localhost:8080/h2-console
 
 ___
 ___
@@ -54,3 +56,6 @@ To access owner's Rest APIs  visit this url from local browser
 Dynamic Content type
 <br /> default(xml) :  http://localhost:8081/petclinic/rest/owner/3
 <br /> to json :  http://localhost:8081/petclinic/rest/owner/3.json
+
+Databse Console
+<br /> h2-console :  http://localhost:8081/petclinic/h2-console
