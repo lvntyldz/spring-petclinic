@@ -1,13 +1,14 @@
-INSERT INTO t_owner (id,first_name,last_name) VALUES (1, 'Ali', 'ALİOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (2, 'Veli', 'VELİOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (3, 'Hasan', 'HASANOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (4, 'Hüseyin', 'HÜSEYİNOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (5, 'Akif', 'AKİFOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (6, 'Mert', 'MERTOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (7, 'Can', 'CANOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (8, 'Murat', 'MURATOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (9, 'Kaan', 'KAANOĞLU');
-INSERT INTO t_owner (id,first_name,last_name) VALUES (10, 'Kadir', 'KADİROĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (1, 'Levent', 'YILDIZ');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (2, 'Ali', 'ALİOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (3, 'Veli', 'VELİOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (4, 'Hasan', 'HASANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (5, 'Hüseyin', 'HÜSEYİNOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (6, 'Akif', 'AKİFOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (7, 'Mert', 'MERTOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (8, 'Can', 'CANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (9, 'Murat', 'MURATOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (10, 'Kaan', 'KAANOĞLU');
+INSERT INTO t_owner (id,first_name,last_name) VALUES (11, 'Kadir', 'KADİROĞLU');
 
 INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (1, 'Maviş', '2018-01-27', 1);
 INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (2, 'Badem', '2018-02-26', 1);
