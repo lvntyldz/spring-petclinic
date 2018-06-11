@@ -69,7 +69,8 @@ public class OwnerRepositoryJdbcImpl implements OwnerRepository {
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		String sql = "DELETE FROM t_owner WHERE id=?";
+		jdbcTemplate.update(sql,id);
 
 	}
 
